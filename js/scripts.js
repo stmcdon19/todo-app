@@ -8,7 +8,8 @@ function removeParent(ele) {
 function moveParentUp(ele) {
   var parent = ele.parentNode;
   var prevParent =  parent.previousSibling;
-  parent.parentNode.insertBefore(parent, prevParent);
+  // parent.parentNode.insertBefore(parent, prevParent);
+  prevParent.insertAdjacentElement("beforebegin",parent);
 };
 
 function moveParentDown(ele) {
